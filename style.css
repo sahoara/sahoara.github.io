@@ -1,0 +1,176 @@
+body {
+	background-color: #f5c7a6;
+	margin: 0;
+	font-family: avenir;
+}
+
+#header {
+	background-color: #f5c7a6;
+	height: 130px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.header-title {
+	display: block;
+	margin: auto;
+	line-height: 130px;
+	text-align: center;
+
+	font-family: Avenir;
+	font-weight: 300;
+	font-size: 40px;
+
+	color: #1b1b36; 
+}
+
+
+
+
+
+#buttons {
+	background-color: #141426;
+	height: 45px;
+}
+
+#buttons .container {
+	width: 50%;
+	min-width: 400px;
+}
+
+
+.inner-button{
+	display: inline-block;
+	position: relative;
+	float: left;
+	width: 25%;
+	height: 45px;
+	margin: 0;
+	padding: 0;
+}
+
+.button-text {
+	box-sizing: border-box;
+	height: 35px;
+	text-align: center;
+	color: #a5a5d9;
+	padding: 7.5px 0 7.5px 0;
+	font-size: 20px;
+}
+
+.button-line {
+	position: relative;
+
+	background-color: #353552;
+	height: 5px;
+	border-radius: 5px;
+	width: 15%;
+	margin: auto;
+}
+
+.button-text:hover ~ .button-line {
+	animation-fill-mode: forwards;
+	animation-name: hoverButton;
+	animation-duration: 0.7s;
+}
+
+@keyframes hoverButton {
+	from {background-color: #353552; width: 15%;}
+	to {background-color: white; width: 20%;}
+}
+
+.button-text:not(:hover) ~ .button-line {
+	animation-name: hoverOutButton;
+	animation-duration: 0.7s;
+}
+
+@keyframes hoverOutButton {
+	from {background-color: white; width: 20%;}
+	to {background-color: #353552; width: 15%;}
+}
+
+
+
+
+
+#content {
+	background-color: #1b1b36;
+	min-height: 1000px;
+}
+
+
+
+
+
+#footer {
+	background-color: #141426;
+	height: 50px;
+	margin: auto;
+}
+
+.footer-text {
+	color: white;
+	text-align: center;
+	line-height: 50px;
+}
+
+
+
+
+
+.header-planet {
+	transform: scale(0.5);
+
+	position: absolute;
+	float: left;
+	top: -175px;
+	left: -175px;
+}
+
+
+#circle {
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+
+	background-color: #945222;
+}
+
+#ring {
+	width: 600px;
+	height: 50px;
+	border-radius: 25px;
+
+	position: absolute;
+	float: left;
+	top: 225px;
+	left: -50px;
+
+
+	background-color: #c98655;
+}
+
+.header-title:hover ~ .header-planet {
+	animation-name: hoverSaturn;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes hoverSaturn {
+	from {transform: scale(0.5);}
+	to {transform: scale(0.6);}
+}
+
+.header-title:not(:hover) ~ .header-planet {
+	animation-name: hoverOutSaturn;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes hoverOutSaturn {
+	from {transform: scale(0.6);}
+	to {transform: scale(0.5);}
+}
